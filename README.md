@@ -14,13 +14,14 @@ https://github.com/Btwo2/DesafioEverymind/assets/110456965/13f23e4d-f51e-4f12-8f
  
  2 - Make sure all files are in the same folder;
  
- 3 - Now, run the development server:
+ 3 - Now, run the server app:
 
   ```cmd
   npm start
   ```
 
-
+ 4 - Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ 
 In this solution, I could consider some issues like:
  - All field must be filled for a new product register
  - Two step verification for deleting a product
