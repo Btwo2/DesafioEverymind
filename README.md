@@ -6,7 +6,8 @@ Solving the challenge proposed by EveryMind for the fictional client Nunes Sport
 
 Using the NoSQL MongoDB database and the Express.js framework, it is possible to create web applications and APIs very quickly and easily. Therefore, considering the short timeframe for developing the CRUD system, I chose to use them as tools in this solution.
 
-![Nunes_Sport_CRUD](https://github.com/Btwo2/DesafioEverymind/assets/110456965/13f23e4d-f51e-4f12-8f1b-fb461f9fda73)
+![Canvas - Every Mind](https://github.com/Btwo2/DesafioEverymind/assets/110456965/5e7aa779-d228-4e55-8b9f-04ed7c3753de)
+
 
 ## Getting Started
 
