@@ -10,8 +10,10 @@ https://github.com/Btwo2/DesafioEverymind/assets/110456965/13f23e4d-f51e-4f12-8f
 
 ## Getting Started
 
- 1 - Unzip the node_modules folder
- 2 - Make sure all files are in the same folder
+ 1 - Unzip the node_modules folder;
+ 
+ 2 - Make sure all files are in the same folder;
+ 
  3 - Now, run the development server:
 
   ```cmd
