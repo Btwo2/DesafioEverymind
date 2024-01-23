@@ -8,10 +8,20 @@ Using the NoSQL MongoDB database and the Express.js framework, it is possible to
 
 https://github.com/Btwo2/DesafioEverymind/assets/110456965/13f23e4d-f51e-4f12-8f1b-fb461f9fda73
 
+## Getting Started
+
+ 1 - Unzip the node_modules folder
+ 2 - Make sure all files are in the same folder
+ 3 - Now, run the development server:
+
+  ```cmd
+  npm start
+  ```
+
+
 In this solution, I could consider some issues like:
  - All field must be filled for a new product register
  - Two step verification for deleting a product
  - Multiple product deletion also requiring double confirmation
  - Codes and Prices must be numbers, codes must be integers and prices allowing just two digits after decimal
-
-A improvements that would be relevant but wasn't implemented is searching the code number before register, considering mistakes registering same code twice
+ - A improvements that would be relevant but wasn't implemented is searching the code number before register, considering mistakes registering same code twice
