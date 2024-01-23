@@ -13,7 +13,7 @@ https://github.com/Btwo2/DesafioEverymind/assets/110456965/13f23e4d-f51e-4f12-8f
  1 - Retrieve this entire repository via URL
  
   ```git
-   git clone [url]
+   git clone https://github.com/Btwo2/DesafioEverymind
   ```
 
  2 - Unzip the node_modules folder;
