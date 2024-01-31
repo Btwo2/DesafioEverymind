@@ -22,7 +22,11 @@ Using the NoSQL MongoDB database and the Express.js framework, it is possible to
    git clone https://github.com/Btwo2/DesafioEverymind
   ```
 
- 2 - Unzip the node_modules folder to node_modules\;
+ 2 - Install the node_modules;
+ 
+ ```cmd
+  npm install express
+  ```
  
  3 - Make sure all files are in the same folder;
  
