@@ -6,7 +6,7 @@ Solving the challenge proposed by EveryMind for the fictional client Nunes Sport
 
 Using the NoSQL MongoDB database and the Express.js framework, it is possible to create web applications and APIs very quickly and easily. Therefore, considering the short timeframe for developing the CRUD system, I chose to use them as tools in this solution.
 
- ![image](https://github.com/Btwo2/DesafioEverymind/assets/110456965/dde424c9-17d8-45ce-b833-d3a50b7cf396)
+![image](https://github.com/Btwo2/DesafioEverymind/assets/110456965/abceee6e-56ff-41f9-bd73-4bfff163f6e1)
 
 ## Try by yourself!
 
@@ -48,7 +48,7 @@ Using the NoSQL MongoDB database and the Express.js framework, it is possible to
 
 - Access [Deta Space - Nunes Sports](https://deta.space/discovery/r/gr8gc93iasoqsap6) and install on your Space
 
-![Nunes Sports](https://github.com/Btwo2/DesafioEverymind/assets/110456965/982c1acd-3a73-42a6-b68b-f1fcbd711192)
+![ezgif-2-6fdc79c4c2](https://github.com/Btwo2/DesafioEverymind/assets/110456965/5250db26-bf84-4ad1-9b70-d93c064387a5)
 
  In this solution, I could consider some issues like:
  - All field must be filled for a new product register
