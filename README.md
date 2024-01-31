@@ -47,8 +47,11 @@ Using the NoSQL MongoDB database and the Express.js framework, it is possible to
 - Create a [Deta Space](https://deta.space/) account
 
 - Access [Deta Space - Nunes Sports](https://deta.space/discovery/r/gr8gc93iasoqsap6) and install on your Space
+  
+<p align="center">
+<img src="https://github.com/Btwo2/DesafioEverymind/assets/110456965/5250db26-bf84-4ad1-9b70-d93c064387a5" width="800"/>
+</p>
 
-![ezgif-2-6fdc79c4c2](https://github.com/Btwo2/DesafioEverymind/assets/110456965/5250db26-bf84-4ad1-9b70-d93c064387a5)
 
  In this solution, I could consider some issues like:
  - All field must be filled for a new product register
