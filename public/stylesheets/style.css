@@ -14,3 +14,16 @@ a {
 .input-number {
     -moz-appearance: textfield;
 }
+
+img{
+	position: absolute;
+	top: 30px;
+	right: 40px;
+}
+
+.menu tr{
+	background-color: #E5E4E2;
+	position: fixed;
+	bottom: 0px;
+	right: 50px;
+}
