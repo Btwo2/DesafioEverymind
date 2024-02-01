@@ -15,27 +15,27 @@ async function connect() {
 
 async function findAll() {
     const db = await connect();
-    return db.collection("customers").find().toArray();
+    return db.collection("products").find().toArray();
 }
 
 async function insert(costumer){
 	const db = await connect();
-	return db.collection("customers").insertOne(costumer)
+	return db.collection("products").insertOne(costumer)
 }
 
 async function deleteOne(id) {
     const db = await connect();
-    return db.collection("customers").deleteOne({ _id: new ObjectId(id) });
+    return db.collection("products").deleteOne({ _id: new ObjectId(id) });
 }
 
 async function findOne(id) {
     const db = await connect();
-    return db.collection("customers").findOne({_id: new ObjectId(id)});
+    return db.collection("products").findOne({_id: new ObjectId(id)});
 }
 
 async function update(id, customer) {
     const db = await connect();
-    return db.collection("customers").updateOne({ _id: new ObjectId(id) }, { $set: customer });
+    return db.collection("products").updateOne({ _id: new ObjectId(id) }, { $set: customer });
 }
 
 module.exports = { findAll, insert, findOne, deleteOne, update}

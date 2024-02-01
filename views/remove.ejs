@@ -6,14 +6,25 @@
 	</head>
 	<body style="text-align:left;">
 		<h1 style="color:black;"><%= title %></h1>
+		<div id="content">
+			<img src="/NS_logo.png" width="160" height="160" />
+		</div>
+		
+		<div class="menu">	
+			<table class="table table-hover">				<! tabela sem borda >
+				<thead>
+					<tr>
+						<th scope="col"><a href="/">Início</a></th>
+						<th scope="col"><a href="/new">Cadastrar Novo Produto</a></th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+		
 		<ul>
 			<fieldset>
 				<legend>
 					Selecione os produtos a serem removidos:
-					<form action="delete" method="POST">
-						<input type="hidden" id="hiddenform" name="id" value="" size ="15" />
-						<input type="submit" id="sub1" onClick="remove()" value="Remove" style="float: right; font-size: 15px;"/>
-					</forms>
 				</legend>
 				
 				</br>
@@ -33,26 +44,26 @@
 						<ul>
 							<% 
 							docs.forEach(
-								function(customer,index){ 
+								function(products,index){ 
 									%>
 									<tr>
 										<td>
 											<label for="scales"><%= index + 1 %></label>
 										</td>
 										<td>
-											<label for="scales"><%= customer.name %></label>
+											<label for="scales"><%= products.name %></label>
 										</td>
 										<td>
-											<label for="scales"><%= customer.code %></label>
+											<label for="scales"><%= products.code %></label>
 										</td>
 										<td>
-											<label for="scales"><%= customer.price %></label>
+											<label for="scales"><%= products.price %></label>
 										</td>
 										<td>
-											<label for="scales"><%= customer.description %></label>
+											<label for="scales"><%= products.description %></label>
 										</td>
 										<td>
-											<input type="checkbox" id="<%= customer._id %>" name="boxes"/>
+											<input type="checkbox" id="<%= products._id %>" name="boxes"/>
 										</td>
 									</tr>
 									<%
@@ -62,15 +73,14 @@
 						</tr>
 					</tbody>
 				</table>
+				<form action="delete" method="POST">
+					<input type="hidden" id="hiddenform" name="id" value="" size ="15" />
+					<input type="submit" id="sub1" onClick="remove()" value="Remove" style="float: left; font-size: 15px;"/>
+				</forms>
 			</fieldset>
 
 			<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"/>
 
-			<table class="table table-hover">				<! tabela com borda > 
-				<tbody>
-					<th scope="row"><a href="/">Início</a></th>
-				</tbody>
-			</table>
 		</ul>		
 	</body>
 	<script language="JavaScript">

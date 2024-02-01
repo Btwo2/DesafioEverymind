@@ -23,8 +23,17 @@ router.post('/save', async (req, res, next) => {
 	}
 })
 
-router.get('/new', (req, res, next) => {
-	res.render('new', { title: 'Nunes Sports', doc: {"name":"","code":"","price":"","description":""}, action: 'save' });
+router.get('/new', async (req, res, next) => {
+	try {
+		const docs = await db.findAll();
+		const code_list = [];
+		for(let i=0, n=docs.length; i<n; i++) {
+			code_list.push(docs[i].code)
+		}
+		res.render('new', { title: 'Nunes Sports', code_list, doc: {"name":"","code":"","price":"","description":""}, action: 'save' });
+	} catch (err) {
+		next(err);
+	}	
 });
 
 router.get('/remove', async (req, res, next) => {
@@ -64,8 +73,13 @@ router.get('/edit/:id', async (req, res, next) => {
   const id = req.params.id;
 
   try {
+	const docs = await db.findAll();
+	const code_list = [];
+	for(let i=0, n=docs.length; i<n; i++) {
+		code_list.push(docs[i].code)
+	}
     const doc = await db.findOne(id);
-    res.render('new', { title: 'Edição de Produto', doc, action: '/edit/' + doc._id });
+    res.render('new', { title: 'Edição de Produto', code_list, doc, action: '/edit/' + doc._id });
   } catch (err) {
     next(err);
   }
@@ -80,7 +94,6 @@ router.post('/edit/:id', async (req, res) => {
 
   try {
     const result = await db.update(id, { name, code, price, description });
-    console.log(result);
     res.redirect('/');
   } catch (err) {
     next(err);

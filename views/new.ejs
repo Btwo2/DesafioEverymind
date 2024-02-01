@@ -7,16 +7,33 @@
 
 	<body style="text-align:left;">
 		<h1 style="color:black;"><%= title %></h1>
+
+		<div id="content">
+			<img src="/NS_logo.png" width="300" height="300" />
+		</div>
+		
+		<div class="menu">	
+			<table class="table table-hover">				<! tabela sem borda >
+				<thead>
+					<tr>
+						<th scope="col"><a href="/">Início</a></th>
+						<th scope="col"><a href="/remove">Remover Produto</a></th>
+						<th scope="col"><a href="/show_all">Mostrar Todos Os Produto</a></th>
+					</tr>
+				</thead>
+			</table>
+		</div>
+		
 		<p> Realize o cadastro do novo produto abaixo</p>
 		<form action="<%= action %>" method="POST" onSubmit="return CheckEmpty(this)">
 			<p>
-				<input id="name" type="text" name="name" value="<%= doc.name %>" placeholder="Nome do produto" size="50" maxlength="15"/>
+				<input id="name" type="text" name="name" value="<%= doc.name %>" placeholder="Nome do produto" size="50" maxlength="20"/>
 			</p>
 			<p>
-				<input id="code" type="number" class="input-number" name="code" value="<%= doc.code %>" placeholder="Código do produto" size="50" maxlength="15"/>
+				<input id="code" type="number" class="input-number" name="code" value="<%= doc.code %>" placeholder="Código do produto" size="50" maxlength="10" onkeypress="return isNumberKey(event)"/>
 			</p>
 			<p>
-				<input id="price" type="number" name="price" value="<%= doc.price %>" step="0.01" placeholder="Preço do produto" size="50" maxlength="15"/>
+				<input id="price" type="number" name="price" value="<%= doc.price %>" step="0.01" placeholder="Preço do produto" size="50" maxlength="6" onkeypress="return isNumberKey(event)"/>
 			</p>
 			<p>
 				<textarea id="description" type="text" name="description" placeholder="Descrição do produto" cols="50" rows="7" style="resize: none" maxlength="50"><%= doc.description %></textarea>	
@@ -34,7 +51,77 @@
 				if (document.getElementById("name").value === "" || document.getElementById("code").value === "" || document.getElementById("price").value === "" || document.getElementById("description").value === ""){ 
 					alert("Preencha todos os campos");
 					return false;
+				}
+				
+				if ("<%= doc.code %>" === document.getElementById("code").value){
+					return true;
+				}
+				return SearchCode();
+			}
+			
+			function SearchCode(){
+				const code_list = "<%= code_list %>".split(",");
+				for(let i=0, n=code_list.length; i<n; i++) {
+					if(code_list[i] === document.getElementById("code").value){
+						alert("Código de Produto já existente");
+						return false;
 					}
+				}
+				return true;
+			}	
+			document.querySelector("input[id=code]").addEventListener('input', addLeadingZero)
+			document.querySelector("input[id=price]").addEventListener('input', formatPrice)
+
+			function addLeadingZero(event) {
+				// get maxlength attr
+				const maxLength = parseInt(event.target.getAttribute("maxlength"))
+				const input_value = event.target.value.toString();
+				// "0".repeat(maxLength) <-- create default pad with maxlength given
+				// append zero and slice last of attr maxlength value
+				if (input_value != 0){
+					if (input_value < Math.pow(10, maxLength)) {
+						const newValue = ("0".repeat(maxLength) + input_value).slice(-maxLength);
+						// change the value of input
+						event.target.value = newValue
+					}
+					else {
+						event.target.value = (input_value).slice(0,-1)
+					}
+				}
+				else{
+					event.target.value = "";
+				}
+			}
+			
+			function isNumberKey(evt) {
+				var charCode = (evt.which) ? evt.which : event.keyCode;
+				if ((charCode < 48 || charCode > 57))
+					return false;
+
+				return true;
+			}
+			
+			function formatPrice(event) {
+				// get maxlength attr
+				const maxLength = parseInt(event.target.getAttribute("maxlength"))
+				var input_value = event.target.value.toString();
+				input_value = input_value.replace(".", "");
+				// "0".repeat(maxLength) <-- create default pad with maxlength given
+				// append zero and slice last of attr maxlength value
+				if (input_value != 0){
+					if (input_value < Math.pow(10, maxLength)) {
+						const newValue = ("0".repeat(maxLength) + input_value).slice(-maxLength);
+						// change the value of input
+						event.target.value = (newValue / 100).toFixed(maxLength);
+					}
+					else {
+						const newValue = (input_value).slice(0,-1);
+						event.target.value = (newValue / 100).toFixed(maxLength);
+					}
+				}
+				else {
+					event.target.value = "";
+				}
 			}
 		</script>			
 	</body>
