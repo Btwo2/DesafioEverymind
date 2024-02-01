@@ -4,7 +4,7 @@
 
 Solving the challenge proposed by EveryMind for the fictional client Nunes Sports, a system was implemented for displaying, creating, editing, and deleting products sold by the company.
 
-Using the NoSQL MongoDB database and the Express.js framework, it is possible to create web applications and APIs very quickly and easily. Therefore, considering the short timeframe for developing the CRUD system, I chose to use them as tools in this solution.
+Using NoSQL MongoDB database and Express.js framework, it's possible to create web applications and APIs very quickly and easily. Therefore, considering the deadline for developing the CRUD system, this tools were chosen for the final solution.
 
 ![image](https://github.com/Btwo2/DesafioEverymind/assets/110456965/abceee6e-56ff-41f9-bd73-4bfff163f6e1)
 
@@ -22,10 +22,10 @@ Using the NoSQL MongoDB database and the Express.js framework, it is possible to
    git clone https://github.com/Btwo2/DesafioEverymind
   ```
 
- 2 - Install the node_modules;
+ 2 - Install the dependencies and configure the .env file with your database credentials;
  
  ```cmd
-  npm install express
+  npm install dotenv
   ```
  
  3 - Make sure all files are in the same folder;
