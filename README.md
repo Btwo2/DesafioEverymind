@@ -6,18 +6,27 @@ Solving the challenge proposed by EveryMind for the fictional client Nunes Sport
 
 Using the NoSQL MongoDB database and the Express.js framework, it is possible to create web applications and APIs very quickly and easily. Therefore, considering the short timeframe for developing the CRUD system, I chose to use them as tools in this solution.
 
-![Canvas - Every Mind](https://github.com/Btwo2/DesafioEverymind/assets/110456965/5e7aa779-d228-4e55-8b9f-04ed7c3753de)
+![image](https://github.com/Btwo2/DesafioEverymind/assets/110456965/abceee6e-56ff-41f9-bd73-4bfff163f6e1)
 
+## Try by yourself!
+
+- Create a [Deta Space](https://deta.space/) account
+
+- Access [Deta Space - CyberThoughts](https://deta.space/discovery/r/bsua4ptrgftbxpan) and install on your Space
 
 ## Getting Started
 
- 1 - Retrieve this entire repository via URL
+ 1 - Retrieve this repository via URL
  
   ```git
    git clone https://github.com/Btwo2/DesafioEverymind
   ```
 
- 2 - Unzip the node_modules folder to node_modules\;
+ 2 - Install the node_modules;
+ 
+ ```cmd
+  npm install express
+  ```
  
  3 - Make sure all files are in the same folder;
  
@@ -27,11 +36,26 @@ Using the NoSQL MongoDB database and the Express.js framework, it is possible to
   npm start
   ```
 
- 5 - Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
- 
-In this solution, I could consider some issues like:
+ 5 - Open [http://localhost:3000](http://localhost:3000) with your browser to interact.
+
+ # Web Deployed Version
+
+ ![image](https://github.com/Btwo2/DesafioEverymind/assets/110456965/c04c016b-4b64-4b68-ae8a-bc019adc4f4a)
+
+## Try by yourself!
+
+- Create a [Deta Space](https://deta.space/) account
+
+- Access [Deta Space - Nunes Sports](https://deta.space/discovery/r/gr8gc93iasoqsap6) and install on your Space
+  
+<p align="center">
+<img src="https://github.com/Btwo2/DesafioEverymind/assets/110456965/5250db26-bf84-4ad1-9b70-d93c064387a5" width="800"/>
+</p>
+
+
+ In this solution, I could consider some issues like:
  - All field must be filled for a new product register
  - Two step verification for deleting a product
  - Multiple product deletion also requiring double confirmation
- - Codes and Prices must be numbers, codes must be integers and prices allowing just two digits after decimal
- - A improvements that would be relevant but wasn't implemented is searching the code number before register, considering mistakes registering same code twice
+ - Codes and Prices must be limited numbers, codes must be integers and prices allowing just two digits after decimal
+ - Code number is searched before register, considering mistakes registering same code twice
