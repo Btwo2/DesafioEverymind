@@ -2,7 +2,7 @@
 
 ##  Node.js CRUD + MongoDB Native Driver
 
-Solving the challenge proposed by EveryMind for the fictional client Nunes Sports, a system was implemented for displaying, creating, editing, and deleting products sold by the company.
+Challenge proposed by EveryMind for the fictional client Nunes Sports, a system was implemented for displaying, creating, editing, and deleting products sold by the company.
 
 Using NoSQL MongoDB database and Express.js framework, it's possible to create web applications and APIs very quickly and easily. Therefore, considering the deadline for developing the CRUD system, this tools were chosen for the final solution.
 
@@ -52,8 +52,7 @@ Using NoSQL MongoDB database and Express.js framework, it's possible to create w
 <img src="https://github.com/Btwo2/DesafioEverymind/assets/110456965/5250db26-bf84-4ad1-9b70-d93c064387a5" width="800"/>
 </p>
 
-
- In this solution, I could consider some issues like:
+ Final considerations and results:
  - All field must be filled for a new product register
  - Two step verification for deleting a product
  - Multiple product deletion also requiring double confirmation
